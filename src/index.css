@@ -1,13 +1,174 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    padding-bottom: 50px;
+    /* Menambahkan padding-bottom agar konten tidak tertutup oleh footer */
+}
+
+.container {
+
+    margin: 0 auto;
+
+}
+
+.header {
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    color: red;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.menu p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.food {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.food img {
+    width: 40vh;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.food h2 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+}
+
+.food span {
+    font-size: 1rem;
+    color: red;
+}
+
+.food p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.orderButton:hover {
+    background-color: #7bbbf7;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.food-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.footer h1 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.sold-out {
+    opacity: 1;
+}
+
+.sold-out img {
+    opacity: 0.5;
+}
+
+.sold-out h2 {
+    color: gray;
+}
+
+.sold-out span {
+    color: gray;
+}
+
+.sold-out p {
+    color: gray;
+}
+
+/* Responsive */
+@media screen and (mia-width: 360px) {
+    .menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .food {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .food img {
+        width: 100%;
+        height: 100%;
+    }
 }
